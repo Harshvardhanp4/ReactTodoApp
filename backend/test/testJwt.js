@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const  {signToken, verifyToken } = require("./utils/jwtUtils")
+const  {signToken, verifyToken } = require("../utils/jwtUtils")
 
 const testPayload = {
     userId: "abc123"
