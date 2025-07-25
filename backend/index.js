@@ -44,7 +44,11 @@ app.use(express.json());
 
 // Define routes here 
 
+const authRoutes = require ("./routes/authRoutes")
+const todoRoutes = require ("./routes/todoRoutes")
 
+app.use("/api/auth", authRoutes);
+app.use("/api/todos", todoRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
