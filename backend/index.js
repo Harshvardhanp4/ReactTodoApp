@@ -17,20 +17,20 @@ mongoose.connect(process.env.MONGODB_URI)
     console.log(" Connected to MongoDB");
 
 //Create a test user (for testing purpose only)
-    const testUser = await user.create({
-        username: "testUser",
-        password: "test123"
-    });
+    // const testUser = await user.create({
+    //     username: "testUser",
+    //     password: "test123"
+    // });
 
     //Create a sample todo linked to that user
-    await todo.create({
-        title: "First Todo",
-        description: "testing",
-        completed: false,
-        userId: testUser._id
-    });
+    // await todo.create({
+    //     title: "First Todo",
+    //     description: "testing",
+    //     completed: false,
+    //     userId: testUser._id
+    // });
 
-    console.log("Sample data inserted (test user + todo)");
+    // console.log("Sample data inserted (test user + todo)");
 })
 .catch((err) => {
     console.log("Connection error:", err);

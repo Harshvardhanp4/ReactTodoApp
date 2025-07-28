@@ -5,12 +5,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 const zodMiddleware = require("../middlewares/zodMiddleware");
 const { todoSchema } = require("../utils/zod");
 
-const {
-    createTodo,
-    getTodos,
-    updateTodo,
-    deleteTodo
-} = require("../controllers/todoController");
+const {createTodo,getTodos,updateTodo,deleteTodo} = require("../controllers/todoController");
 
 router.use(authMiddleware); // all routes below require auth
 
