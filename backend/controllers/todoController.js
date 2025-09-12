@@ -51,10 +51,10 @@ async function updateTodo(req,res){
              }
             
         );
-        if(!updated) return res.json({msg: "Todo not found!"})
+        if(!updated) return res.status(404).json({msg: "Todo not found!"})
     }
     catch(error){
-        console.error("udpate error!");
+        console.error("update error!");
         res.status(500).json({
             msg: "Failed to update todo"
         })
